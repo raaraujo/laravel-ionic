@@ -47,7 +47,7 @@ class LoginTest extends TestCase
         ])->assertStatus(500);;
 
     }
-/*
+
     public function testRefreshToken()
     {
         $testResponse = $this->makeJWTToken();
@@ -72,7 +72,7 @@ class LoginTest extends TestCase
             'Authorization' => "Bearer $token"
         ])->assertStatus(500);
     }
-*/
+
     protected  function clearAuth(){
         $reflectionClass = new \ReflectionClass(JWTGuard::class);
         $reflectionProperty = $reflectionClass->getProperty('user');
